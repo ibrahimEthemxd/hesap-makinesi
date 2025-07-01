@@ -1,0 +1,36 @@
+<div class="buttons">
+  <app-button label="AC" type="func" (clicked)="clear.emit()"></app-button>
+  <app-button label="⌫" type="func" (clicked)="backspace.emit()"></app-button>
+  <app-button label="%" (clicked)="percent.emit()"></app-button>
+  <app-button label="/" (clicked)="press.emit('/')"></app-button>
+
+  <app-button label="7" (clicked)="press.emit('7')"></app-button>
+  <app-button label="8" (clicked)="press.emit('8')"></app-button>
+  <app-button label="9" (clicked)="press.emit('9')"></app-button>
+  <app-button label="*" (clicked)="press.emit('*')"></app-button>
+
+  <app-button label="4" (clicked)="press.emit('4')"></app-button>
+  <app-button label="5" (clicked)="press.emit('5')"></app-button>
+  <app-button label="6" (clicked)="press.emit('6')"></app-button>
+  <app-button label="-" (clicked)="press.emit('-')"></app-button>
+
+  <app-button label="1" (clicked)="press.emit('1')"></app-button>
+  <app-button label="2" (clicked)="press.emit('2')"></app-button>
+  <app-button label="3" (clicked)="press.emit('3')"></app-button>
+  <app-button label="+" (clicked)="press.emit('+')"></app-button>
+
+  <app-button [label]="showScientific ? '×' : '☰'" type="fx-toggle" (clicked)="toggleScientific.emit()"></app-button>
+  <app-button label="0" (clicked)="press.emit('0')"></app-button>
+  <app-button label="." (clicked)="press.emit('.')"></app-button>
+  <app-button label="=" type="equal" (clicked)="calculate.emit()"></app-button>
+</div>
+
+<div class="scientific" *ngIf="showScientific">
+  <app-button label="√" (clicked)="sqrt.emit()"></app-button>
+  <app-button label="x!" (clicked)="factorial.emit()"></app-button>
+  <app-button label="xʸ" (clicked)="power.emit()"></app-button>
+  <app-button label="ln" (clicked)="ln.emit()"></app-button>
+  <app-button label="log" (clicked)="log10.emit()"></app-button>
+  <app-button label="π" (clicked)="insertPi.emit()"></app-button>
+  <app-button label="e" (clicked)="insertE.emit()"></app-button>
+</div>

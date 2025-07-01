@@ -1,0 +1,20 @@
+<div class="calculator">
+  <app-display [value]="display"></app-display>
+
+  <app-keypad
+    [showScientific]="showScientific"
+    (press)="press($event)"
+    (clear)="clear()"
+    (backspace)="backspace()"
+    (percent)="percent()"
+    (calculate)="calculate()"
+    (toggleScientific)="toggleScientific()"
+    (sqrt)="sqrt()"
+    (factorial)="factorial()"
+    (power)="power()"
+    (ln)="ln()"
+    (log10)="log10()"
+    (insertPi)="insertPi()"
+    (insertE)="insertE()"
+  ></app-keypad>
+</div>

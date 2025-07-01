@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { DisplayComponent } from '../display/display';
+import { KeypadComponent } from '../keypad/keypad';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, DisplayComponent, KeypadComponent],
   templateUrl: './calculator.html',
   styleUrls: ['./calculator.css']
 })
